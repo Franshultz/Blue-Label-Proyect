@@ -12,10 +12,11 @@ header{
     height: max-content;
     background-image: url(../img/imagenes/header/botellas.jpg);
     background-size: cover;
+    height: 35em;
 }
 
 nav{
-    height: 35em;
+    position: relative;
 }
 
 .nav-contenedor-ul{
@@ -30,8 +31,7 @@ nav{
     align-content: flex-start;
 }
 
-.nav-contenedor-ul li a{
-
+.nav-contenedor-ul a{
     font-family:Verdana, Geneva, Tahoma, sans-serif, 'Times New Roman', Times, serif;
     font-size: 0.8em;
     font-weight: 600;
@@ -55,14 +55,56 @@ nav{
     bottom: 0.8em;
 }
 
-.nav-contenedor-buscador img{
+.nav-contenedor-buscador img, .nav-contenedor-carrito img{
     width: 2.5em;
     height: 2.5em;
     margin: 2em;
 }
 
-.nav-contenedor-carrito img{
-    width: 2.5em;
-    height: 2.5em;
-    margin: 2em;
+h1{
+    font-size: 5em;
+    font-family: 'Raleway', sans-serif;
+    color: rgb(236, 98, 0);
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5em;
 }
+
+main{
+    background-color: black;
+    height: max-content;
+}
+
+.main-contenedor-tarjetas{
+    height: max-content;
+    display: grid;
+    grid-template-areas: 
+    "vinos vinos vodkas"
+    "whiskies cervezas cervezas"
+    "aperitivos aperitivos extras"
+    ;
+    grid-template-columns: 30% 30% 40%;
+    grid-template-rows: 25em 25em 25em;
+    grid-column-gap:2em;
+    grid-row-gap: 2em;
+    justify-content: center;
+    padding: 15em 5em;
+}
+
+.tarjetas-productos{
+    border: 0.2em solid black;
+    border-radius: 1em;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.tarjeta-h2{
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.5em;
+    color: rgb(255, 174, 0);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
