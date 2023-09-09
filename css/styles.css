@@ -12,18 +12,21 @@ header{
     height: max-content;
     background-image: url(../img/imagenes/header/botellas.jpg);
     background-size: cover;
-    height: 35em;
+    height: 50em;
 }
 
 nav{
-    position: relative;
+    /* position: relative; */
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
 }
 
 .nav-contenedor-ul{
-    height: max-content;
+    height: 7em;
     width: 100%;
     list-style: none;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.476);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -36,7 +39,7 @@ nav{
     font-size: 0.8em;
     font-weight: 600;
     text-decoration: none;
-    color: rgb(227, 146, 40);
+    color:rgb(211, 186, 43);
     margin: 3.5em 1em;
     display: flex;
 }
@@ -61,13 +64,19 @@ nav{
     margin: 2em;
 }
 
-h1{
-    font-size: 5em;
-    font-family: 'Raleway', sans-serif;
-    color: rgb(236, 98, 0);
+.div-h1{
+    height: 100%;
+    font-size: 3em;
+    background-image: url(../img/imagenes/main/cervezas.jpg);
+    /* font-family: 'Raleway', sans-serif; */
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Libre Baskerville', serif;
+    color:rgba(255, 123, 0, 0.598);
     display: flex;
     justify-content: center;
-    margin-top: 1.5em;
+    align-items: center;
+    padding-bottom: 1em;
+    /* margin-top: 1.5em; */
 }
 
 main{
@@ -99,10 +108,23 @@ main{
     background-position: center;
 }
 
+.tarjetas-productos:hover{
+    transform: scale(1.05);
+    transition: 1s;
+}
+
+.tarjetaa-h2 :hover{
+    transform: scale(1);
+    transition: 0.5s;
+}
+
 .tarjeta-h2{
-    font-family: 'Raleway', sans-serif;
-    font-size: 2.5em;
-    color: rgb(255, 174, 0);
+    /* font-family: 'Raleway', sans-serif; */
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 3em;
+    color:rgb(211, 186, 43);
+    /* color: rgb(255, 174, 0); */
     height: 100%;
     display: flex;
     justify-content: center;
