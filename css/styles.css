@@ -81,6 +81,7 @@ nav{
 }
 
 /* -------------------------------------------MAIN-------------------------------------- */
+
 main{
     background-color: black;
     height: max-content;
@@ -132,20 +133,62 @@ main{
 .main-contenedor-productos{
     display: grid;
     grid-template-areas: 
+    "aside aside aside aside"
+    "producto1 producto2 producto3 producto4"
+    "producto5 producto6 producto7 producto8"
+    "producto9 producto10 producto11 producto12"
+    ;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 15em 35em 35em 35em; 
+    justify-content: space space-around;
+    justify-items: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 1024px){
+
+    :root{
+        font-size: 11.25px;
+    }
+
+    .main-contenedor-productos{
+    grid-template-areas: 
     "aside aside aside"
     "producto1 producto2 producto3"
     "producto4 producto5 producto6"
     "producto7 producto8 producto9"
     "producto10 producto11 producto12"
     ;
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: 30em 30em 30em; 
-    grid-column-gap:1em;
-    grid-row-gap: 1em;
-    justify-content: space-around;
-    justify-items: center;
-    align-items: center;
-    padding: 0em 0em;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 15em 35em 35em 35em;
+    }
+
+}
+
+@media screen and (max-width: 550px){
+
+    :root{
+        font-size: 7.5px;
+    }
+
+    .main-contenedor-productos{
+    grid-template-areas: 
+    "aside aside"
+    "producto1 producto2"
+    "producto3 producto4"
+    "producto5 producto6"
+    "producto7 producto8"
+    "producto9 producto10"
+    "producto11 producto12"
+    ;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 15em 35em 35em 35em 35em;
+    }
+
+    .div-h1{
+        font-size: 2em;
+    }
+    
 }
 
 .producto{
@@ -158,23 +201,32 @@ main{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    margin: 3em 0em;
 }
 
 .producto:hover{
-    transition: 1s;
-    transform: scale(1.05);
-    transition-timing-function: ease-out;
+    animation: productHover 2s ease-out 0s infinite normal;
+} 
+
+@keyframes productHover{
+    0%{
+        transform: scale(1);
+    }50%{
+        transform: scale(1.03);
+    }100%{
+        transform: scale(1);
+    }
 }
 
 .producto img{
     height: 18em;
     width: 15em;
-    border-radius: 1em 1em 0em 0em;
+    border-radius: 0.5em 0.5em 0em 0em;
 }
 
 .producto-info{
     width: 100%;
-    border-radius: 0em 0em 1em 1em;
+    border-radius: 0em 0em 0.5em 0.5em;
     background-color: rgb(164, 164, 164);
     display: flex;
     flex-direction: column;
