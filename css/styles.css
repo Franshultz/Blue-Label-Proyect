@@ -8,12 +8,16 @@
     font-size: 15px;
 }
 
+/* ----------------------------------HEADER------------------------------------ */
+
 header{
     height: max-content;
-    background-image: url(../img/imagenes/header/botellas.jpg);
+    /* background-image: url(../img/imagenes/header/botellas.jpg); */
     background-size: cover;
     height: 50em;
 }
+
+/* -------------------------------------NAV--------------------------------------- */
 
 nav{
     /* position: relative; */
@@ -35,7 +39,7 @@ nav{
 }
 
 .nav-contenedor-ul a{
-    font-family:Verdana, Geneva, Tahoma, sans-serif, 'Times New Roman', Times, serif;
+    font-family: 'Libre Baskerville', serif;
     font-size: 0.8em;
     font-weight: 600;
     text-decoration: none;
@@ -68,17 +72,15 @@ nav{
     height: 100%;
     font-size: 3em;
     background-image: url(../img/imagenes/main/cervezas.jpg);
-    /* font-family: 'Raleway', sans-serif; */
-    font-family: 'Kanit', sans-serif;
     font-family: 'Libre Baskerville', serif;
     color:rgba(255, 123, 0, 0.598);
     display: flex;
     justify-content: center;
     align-items: center;
     padding-bottom: 1em;
-    /* margin-top: 1.5em; */
 }
 
+/* -------------------------------------------MAIN-------------------------------------- */
 main{
     background-color: black;
     height: max-content;
@@ -111,22 +113,73 @@ main{
 .tarjetas-productos:hover{
     transform: scale(1.05);
     transition: 1s;
-}
-
-.tarjetaa-h2 :hover{
-    transform: scale(1);
-    transition: 0.5s;
+    transition-timing-function: ease-out;
 }
 
 .tarjeta-h2{
-    /* font-family: 'Raleway', sans-serif; */
     font-family: 'Kanit', sans-serif;
     font-family: 'Libre Baskerville', serif;
     font-size: 3em;
     color:rgb(211, 186, 43);
-    /* color: rgb(255, 174, 0); */
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 } 
+
+/*-----------------------------------------MAIN-PRODUCTOS------------------------------------*/
+
+.main-contenedor-productos{
+    display: grid;
+    grid-template-areas: 
+    "aside aside aside"
+    "producto1 producto2 producto3"
+    "producto4 producto5 producto6"
+    "producto7 producto8 producto9"
+    "producto10 producto11 producto12"
+    ;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 30em 30em 30em; 
+    grid-column-gap:1em;
+    grid-row-gap: 1em;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+    padding: 0em 0em;
+}
+
+.producto{
+    font-family: 'Libre Baskerville', serif;
+    width: max-content;
+    background-color: azure;
+    border: 0.2em solid black;
+    border-radius: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.producto:hover{
+    transition: 1s;
+    transform: scale(1.05);
+    transition-timing-function: ease-out;
+}
+
+.producto img{
+    height: 18em;
+    width: 15em;
+    border-radius: 1em 1em 0em 0em;
+}
+
+.producto-info{
+    width: 100%;
+    border-radius: 0em 0em 1em 1em;
+    background-color: rgb(164, 164, 164);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 1em;
+    gap: 1em;
+}
