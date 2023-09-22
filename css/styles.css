@@ -70,7 +70,7 @@ nav{
 
 .div-h1{
     height: 100%;
-    font-size: 3em;
+    font-size: 2em;
     background-image: url(../img/imagenes/main/cervezas.jpg);
     font-family: 'Libre Baskerville', serif;
     color:rgba(255, 123, 0, 0.598);
@@ -133,42 +133,58 @@ main{
 .main-contenedor-productos{
     display: grid;
     grid-template-areas: 
-    "aside aside aside aside"
-    "producto1 producto2 producto3 producto4"
-    "producto5 producto6 producto7 producto8"
-    "producto9 producto10 producto11 producto12"
+    "aside producto1 producto2 producto3 producto4"
+    "aside producto5 producto6 producto7 producto8"
+    "aside producto9 producto10 producto11 producto12"
     ;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 15em 35em 35em 35em; 
-    justify-content: space space-around;
+    grid-template-columns:repeat(5, 1fr);
+    grid-template-rows: 35em 35em; 
+    justify-content: space-around;
     justify-items: center;
     align-items: center;
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1220px){
 
     :root{
-        font-size: 11.25px;
+        font-size: 12px;
     }
+
+    .main-contenedor-tarjetas{
+        height: max-content;
+        display: grid;
+        grid-template-areas: 
+        "vinos"
+        "vodkas"
+        "whiskies"
+        "cervezas" 
+        "aperitivos" 
+        "extras"
+        ;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 25em);
+    }
+
+    .tarjeta-h2{
+        font-size: 2em;
+    } 
 
     .main-contenedor-productos{
     grid-template-areas: 
-    "aside aside aside"
-    "producto1 producto2 producto3"
-    "producto4 producto5 producto6"
-    "producto7 producto8 producto9"
-    "producto10 producto11 producto12"
+    "aside producto1 producto2 producto3"
+    "aside producto4 producto5 producto6"
+    "aside producto7 producto8 producto9"
+    "aside producto10 producto11 producto12"
     ;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 15em 35em 35em 35em;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 35em 35em 35em;
     }
-
 }
 
-@media screen and (max-width: 550px){
+@media screen and (max-width: 780px){
 
     :root{
-        font-size: 7.5px;
+        font-size: 10px;
     }
 
     .main-contenedor-productos{
@@ -184,11 +200,6 @@ main{
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 15em 35em 35em 35em 35em;
     }
-
-    .div-h1{
-        font-size: 2em;
-    }
-    
 }
 
 .producto{
@@ -219,19 +230,58 @@ main{
 }
 
 .producto img{
-    height: 18em;
-    width: 15em;
+    height: 17em;
+    width: 16em;
     border-radius: 0.5em 0.5em 0em 0em;
 }
 
 .producto-info{
     width: 100%;
     border-radius: 0em 0em 0.5em 0.5em;
-    background-color: rgb(164, 164, 164);
+    background-color: rgb(244, 228, 194);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 2em 1em;
     gap: 1em;
+}
+
+.producto-info button{
+    font-size: 1em;
+    font-family: 'Libre Baskerville', serif;
+    color:rgb(211, 186, 43);
+    background-color: black;
+    padding: 1em 2em;
+    border-radius: 1em;
+}
+
+/* --------------------------------FOOTER--------------------------------------- */
+
+/* INTENTA UTILIZAR MEDIDAS RELATIVAS COMO: "em" */
+.footerpadre{
+    display: flex;
+    justify-content: center;
+    border-top: 2px solid rgb(241, 134, 10);
+    background-color: rgb(211, 186, 43);;
+    padding-top: 2px;
+    bottom: 10%;
+}
+
+/* INTENTA UTILIZAR MEDIDAS RELATIVAS COMO: "em" */
+.footerhijo{
+    width: 25%;
+    border-bottom: 2px solid rgb(241, 134, 10);
+}
+
+.footerhijo img{
+    width: 2em;
+    height: 2em;
+}
+
+.footerhijo h4{
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Libre Baskerville', serif;
+    font-style: italic;
+    
 }
