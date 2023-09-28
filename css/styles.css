@@ -262,26 +262,34 @@ main{
 .footerpadre{
     display: flex;
     justify-content: center;
-    border-top: 2px solid rgb(241, 134, 10);
+    border-top: 0.25em solid rgb(241, 134, 10);
     background-color: rgb(211, 186, 43);;
-    padding-top: 2px;
+    padding-top: 0.25em;
     bottom: 10%;
+
 }
 
 /* INTENTA UTILIZAR MEDIDAS RELATIVAS COMO: "em" */
 .footerhijo{
     width: 25%;
-    border-bottom: 2px solid rgb(241, 134, 10);
+    border-bottom: 0.25em solid rgb(241, 134, 10);
 }
 
 .footerhijo img{
     width: 2em;
     height: 2em;
-}
 
+}
+.imgfooter{
+    display: flex;
+    justify-content: center;
+    
+}
 .footerhijo h4{
     font-family: 'Kanit', sans-serif;
     font-family: 'Libre Baskerville', serif;
     font-style: italic;
-    
+    padding: 0.5em;
+    text-align: center;
+    justify-content: center;
 }
