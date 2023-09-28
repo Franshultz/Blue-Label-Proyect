@@ -130,6 +130,7 @@ main{
 
 /*-----------------------------------------MAIN-PRODUCTOS------------------------------------*/
 
+
 .main-contenedor-productos{
     display: grid;
     grid-template-areas: 
@@ -143,6 +144,7 @@ main{
     justify-items: center;
     align-items: center;
 }
+
 
 @media screen and (max-width: 1220px){
 
@@ -164,7 +166,7 @@ main{
         grid-template-columns: 1fr;
         grid-template-rows: repeat(6, 25em);
     }
-
+    
     .tarjeta-h2{
         font-size: 2em;
     } 
@@ -200,6 +202,34 @@ main{
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 15em 35em 35em 35em 35em;
     }
+}
+
+.aside{
+    color: white;
+    height: 100%;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1em;
+    font-weight: lighter;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.aside-categorias, .aside-filtros, .aside-ordenar{
+    margin: 3em 0em;
+}
+
+.aside-categorias h3, .aside-filtros h3, .aside-ordenar h3{
+    padding: 0em 3em 1em 0em;
+    border-bottom: 0.1em solid white;
+}
+
+.aside-categorias ul, .aside-filtros ul, .aside-ordenar ul{
+    list-style-type: none;
+}
+
+.aside-categorias ul li, .aside-filtros ul li, .aside-ordenar ul li{
+    margin: 2em 0em;
 }
 
 .producto{
