@@ -381,3 +381,28 @@ main{
     display: grid;
     grid-area: mapa;
 }
+/*-----------------------------------------MAIN-Nosotros------------------------------------*/
+/* .main-nosotros{
+    height: max-content;
+    display: grid;
+    grid-template-areas: 
+    "nosotros"
+    ;
+    grid-template-columns: 100%;
+    grid-template-rows: 25em;
+    grid-column-gap:2em;
+    grid-row-gap: 2em;
+    justify-content: center;
+    padding: 15em 5em;
+} */
+.main-nosotros{
+    background-image: url(../img/imagenes/Nosotros/Tiendadebebidas.jpg);
+height: 100em;
+background-size: cover;
+display: flex;justify-content: center;align-items: center;
+}
+.contenedor-nosotros{
+    height: 50em;
+width: 50%;
+background-color: aliceblue;    
+}
