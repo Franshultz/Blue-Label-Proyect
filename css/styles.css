@@ -8,20 +8,35 @@
     font-size: 15px;
 }
 
-/* ----------------------------------HEADER------------------------------------ */
+
+/* ----------------------------------------HEADER-ALL----------------------------------- */
+
 
 header {
     height: max-content;
     background-size: cover;
-    height: 45em;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 0;
 }
 
-/* -------------------------------------NAV--------------------------------------- */
+.sombra-efecto{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.168);
+    z-index: 1;
+}
+
+/* ---------------------------------------NAV-ALL--------------------------------------- */
 
 nav {
     width: 100%;
     position: fixed;
-    z-index: 1000;
+    top: 0;
+    z-index: 10;
 }
 
 .nav-contenedor-ul {
@@ -36,13 +51,19 @@ nav {
     align-items: center;
 }
 
+.nav-contenedor-ul li{
+    display: flex;
+    height: 100%;
+}
+
 .nav-contenedor-ul a {
+    display: flex;
+    height: 100%;
     font-family: "Libre Baskerville", serif;
     font-size: 0.8em;
     font-weight: 600;
     text-decoration: none;
     color: rgb(211, 186, 43);
-    margin: 3.5em 1em;
 }
 
 .nav-contenedor-ul li :hover {
@@ -61,7 +82,6 @@ nav {
 .nav-contenedor-carrito img {
     width: 2.5em;
     height: 2.5em;
-    margin: 2em;
 }
 
 .div-h1 {
@@ -70,18 +90,23 @@ nav {
     background-image: url(../img/imagenes/main/cervezas.jpg);
     background-size: cover;
     font-family: "Libre Baskerville", serif;
-    color: rgba(255, 123, 0, 0.598);
+    color: rgba(255, 208, 114, 0.768);
     display: flex;
     justify-content: center;
     align-items: center;
     padding-bottom: 1em;
+    z-index: 22;
 }
 
-/* -------------------------------------------MAIN-------------------------------------- */
+/*----------------------------------------MAIN-INDEX------------------------------------- */
 
 main {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.922);
     height: max-content;
+    margin-top: 40em;
+    width: 100%;
+    position:  absolute;
+    z-index: 4;
 }
 
 .main-contenedor-tarjetas {
@@ -124,7 +149,7 @@ main {
     align-items: center;
 }
 
-/*-----------------------------------------MAIN-PRODUCTOS------------------------------------*/
+/*---------------------------------------MAIN-PRODUCTOS------------------------------------*/
 
 .main-contenedor-productos {
     display: grid;
@@ -137,59 +162,7 @@ main {
     justify-content: space-around;
     justify-items: center;
     align-items: center;
-}
-
-@media screen and (max-width: 1220px) {
-    :root {
-        font-size: 12px;
-    }
-
-    .main-contenedor-tarjetas {
-        height: max-content;
-        display: grid;
-        grid-template-areas:
-            "vinos"
-            "vodkas"
-            "whiskies"
-            "cervezas"
-            "aperitivos"
-            "extras";
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, 25em);
-    }
-
-    .tarjeta-h2 {
-        font-size: 2em;
-    }
-
-    .main-contenedor-productos {
-        grid-template-areas:
-            "aside producto1 producto2 producto3"
-            "aside producto4 producto5 producto6"
-            "aside producto7 producto8 producto9"
-            "aside producto10 producto11 producto12";
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 35em 35em 35em;
-    }
-}
-
-@media screen and (max-width: 780px) {
-    :root {
-        font-size: 10px;
-    }
-
-    .main-contenedor-productos {
-        grid-template-areas:
-            "aside aside"
-            "producto1 producto2"
-            "producto3 producto4"
-            "producto5 producto6"
-            "producto7 producto8"
-            "producto9 producto10"
-            "producto11 producto12";
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 15em 35em 35em 35em 35em;
-    }
+    margin: 10em 0em;
 }
 
 .aside {
@@ -287,33 +260,100 @@ main {
 }
 
 /* --------------------------------------FOOTER------------------------------------------ */
+footer{
+    position: absolute;
+    width: 100%;
+    z-index: 6;
+    margin-top: 135em;
+}
+
+.footer-productos{
+    margin-top: 160em
+}
+
+.footer-up{
+    color: rgb(255, 247, 200);
+    background-color: black;
+    height: max-content;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    padding: 3em;
+}
+
+.footer-up div{
+    width: 25%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2em 2em;
+}
+
+.footer-up div img{
+    margin-bottom: 3em;
+    color: rgb(255, 252, 240);
+    width: 8em;
+    height: 8em;
+}
+
+.footer-up div p{
+    width: 100%;
+    font-family: 'Comfortaa', cursive;
+    font-size: 1.2em;
+    text-align: center;
+}
 
 .footerpadre {
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
-    border-top: 0.25em solid rgb(241, 134, 10);
-    background-color: rgb(211, 186, 43);
+    flex-wrap: wrap;
+    height: max-content;
+    border-top: 0.25em solid rgb(237, 206, 120);
+    background-color: rgb(255, 208, 65);
     padding-top: 0.25em;
     bottom: 10%;
 }
 
 .footerhijo {
-    width: 22%;
-    border-bottom: 0.25em solid rgb(241, 134, 10);
+    padding: 4em 0em;
+
+    font-family: 'Comfortaa', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 50%;
     text-align: center;
 }
 
-.footerhijo img {
+.footerhijo div{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footerhijo div img{
     width: 2em;
     height: 2em;
 }
 
-.footerhijo h4 {
-    font-family: "Libre Baskerville", serif;
-    font-style: italic;
+.footerhijo ul li {
+    margin: 1em;
+    list-style: none;
+    font-family: 'Comfortaa', cursive;
     padding: 0.5em;
     text-align: center;
     justify-content: center;
+    align-items: center;
 }
 
 /* ---------------------------------------MAIN-CONTACTOS ----------------------------------*/
@@ -337,7 +377,7 @@ main {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
     justify-content: center;
-    padding: 3em;
+    padding: 2em;
     display: grid;
     grid-area: h2;
 }
@@ -394,18 +434,22 @@ main {
     height: 100%;
 }
 
-/*---------------------------------------MAIN-Nosotros------------------------------------*/
+/*---------------------------------------MAIN-NOSOTROS------------------------------------*/
 
 .main-nosotros {
     background-image: url(../img/imagenes/Nosotros/Tiendadebebidas.jpg);
-    height: 65em;
+    background-color: rgba(0, 0, 0, 0.781);
+    height: max-content;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+
+
 .contenedor-nosotros {
+    margin: 2em 0em;
     border-radius: 2em;
     padding: 2em;
     font-family: "Libre Baskerville", serif;
@@ -422,4 +466,123 @@ main {
 
 .contenedor-nosotros h3{
     margin: 1em 0em;
+}
+
+/* ------------------------------------Media-Queries-------------------------------------- */
+
+@media screen and (max-width: 1220px) {
+    :root {
+        font-size: 12px;
+    }
+
+    .div-h1 {
+        font-size: 1.2em;
+    }
+
+    /* .nav-contenedor-ul {
+        display: none;
+    } */
+
+    .main-contenedor-tarjetas {
+        height: max-content;
+        display: grid;
+        grid-template-areas:
+            "vinos"
+            "vodkas"
+            "whiskies"
+            "cervezas"
+            "aperitivos"
+            "extras";
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 25em);
+    }
+
+    .tarjeta-h2 {
+        font-size: 2em;
+    }
+
+    footer{
+        margin-top: 220em;
+    }
+
+    .footer-productos{
+        margin-top: 200em
+    }
+
+    .main-contenedor-productos {
+        grid-template-areas:
+            "aside producto1 producto2 producto3"
+            "aside producto4 producto5 producto6"
+            "aside producto7 producto8 producto9"
+            "aside producto10 producto11 producto12";
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 35em 35em 35em;
+    }
+    .main-contactos{
+        grid-template-areas:
+            "h2"
+            "form"
+            "mapa";
+        grid-template-columns: 100%;
+        grid-template-rows: max-content;
+    }
+
+    .contenedor-h2 {
+        font-size: 1.5em;
+    }
+
+    .form fieldset div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form div input , .form div textarea{
+        width: 80%;
+    }
+    
+    .form div textarea{
+        width: 80%;
+    }
+
+    .contenedor-mapa {
+        padding: 2em;
+        height: 45em;
+    }
+
+    .contenedor-nosotros {
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 780px) {
+    :root {
+        font-size: 10px;
+    }
+
+    .footer-up{
+        flex-direction: column;
+    }
+
+    .footer-up div{
+        width: 80%;
+    }
+
+    .footer-productos{
+        margin-top: 280em
+    }
+
+    .main-contenedor-productos {
+        grid-template-areas:
+            "aside aside"
+            "producto1 producto2"
+            "producto3 producto4"
+            "producto5 producto6"
+            "producto7 producto8"
+            "producto9 producto10"
+            "producto11 producto12";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 15em 35em 35em 35em 35em;
+    }
 }
