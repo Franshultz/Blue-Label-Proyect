@@ -54,6 +54,7 @@ nav {
 .nav-contenedor-ul li{
     display: flex;
     height: 100%;
+    margin: 0em 1em;
 }
 
 .nav-contenedor-ul a {
@@ -271,6 +272,14 @@ footer{
     margin-top: 160em
 }
 
+.footer-nosotros{
+    margin-top: 120em;
+}
+
+.footer-ofertas{
+    margin-top: 160em
+}
+
 .footer-up{
     color: rgb(255, 247, 200);
     background-color: black;
@@ -282,7 +291,7 @@ footer{
     justify-content: space-around;
     align-items: center;
     align-content: center;
-    padding: 3em;
+    padding: 10em 2em;
 }
 
 .footer-up div{
@@ -436,36 +445,67 @@ footer{
 
 /*---------------------------------------MAIN-NOSOTROS------------------------------------*/
 
-.main-nosotros {
-    background-image: url(../img/imagenes/Nosotros/Tiendadebebidas.jpg);
-    background-color: rgba(0, 0, 0, 0.781);
+.contenedor-nosotros{
     height: max-content;
-    background-size: cover;
+    padding: 10em 0em 15em;
+}
+
+.contenedor-quienesomos{
+    background-color: rgb(19, 19, 19);
+    border-radius: 2em;
+    color: white;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+    margin: 2em;
+    padding: 2em;
+}
+
+.contenedor-quienesomos h2{
+    color: rgb(203, 163, 0);
+    font-size: 2em;
+    padding-bottom: 1em;
+}
+
+.contenedor-mvv{
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
-
-
-.contenedor-nosotros {
-    margin: 2em 0em;
+.contenedor-target{
+    padding: 3em 0em;
+    background-color: rgb(19, 19, 19);
     border-radius: 2em;
-    padding: 2em;
-    font-family: "Libre Baskerville", serif;
-    height: max-content;
-    width: 50%;
-    background-color: black;
-    color: aliceblue;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 2em 1em ;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    height: 38em;
+    align-items: center;
+    color: white;
 }
 
-.contenedor-nosotros h2{
-    color: goldenrod;
+
+.contenedor-target h3{
+    color: rgb(203, 163, 0);
     font-size: 2em;
+    margin: 2em 0em;
 }
 
-.contenedor-nosotros h3{
-    margin: 1em 0em;
+.contenedor-target img{
+    margin-bottom: 1em;
+    width: 6em;
+    height: 6em;
+}
+
+.contenedor-target p {
+    font-size: 1em;
+    margin: 0em 2em;
 }
 
 /* ------------------------------------Media-Queries-------------------------------------- */
@@ -476,7 +516,8 @@ footer{
     }
 
     .div-h1 {
-        font-size: 1.2em;
+        padding-bottom: 6em;
+        font-size: 1.8em;
     }
 
     /* .nav-contenedor-ul {
@@ -551,7 +592,31 @@ footer{
     }
 
     .contenedor-nosotros {
+        width: 100%;
+    }
+
+    .contenedor-target{
         width: 80%;
+        display: flex;
+        flex-direction: column;
+        height: max-content;
+        align-items: center;
+        color: white;
+    }
+
+    .contenedor-target img{
+        width: 4em;
+        height: 4em;
+        margin: 1em;
+    }
+
+    .contenedor-target h3{
+        font-size: 1.5em;
+        margin: 1em 0em;
+    }
+
+    .footer-nosotros{
+        margin-top: 158em;
     }
 
 }
@@ -559,6 +624,28 @@ footer{
 @media screen and (max-width: 780px) {
     :root {
         font-size: 10px;
+    }
+
+    .div-h1{
+        padding-bottom: 12em;
+        font-size: 1.2em;
+    }
+
+    .aside{
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        height: max-content ;
+    }
+
+    .aside div{
+        margin:1em 1em;
+    }
+
+
+    .aside ul{
+        display: none;
+        visibility: hidden;
     }
 
     .footer-up{
@@ -584,5 +671,13 @@ footer{
             "producto11 producto12";
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 15em 35em 35em 35em 35em;
+    }
+
+    .contenedor-nosotros{
+        padding: 10em 0em 45em;
+    }
+
+    .footer-nosotros{
+        margin-top: 196.5em;
     }
 }
