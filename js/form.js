@@ -31,7 +31,6 @@ formulario.addEventListener("submit", function (event) {
             nombre.focus();
         }else{
             document.getElementById("errorNombre").innerHTML = "";
-            error = false;
         }
     }
 
@@ -46,7 +45,6 @@ formulario.addEventListener("submit", function (event) {
             email.focus();
         }else{
             document.getElementById("errorEmail").innerHTML = "";
-            error = false;
         }
     }
     
@@ -61,7 +59,6 @@ formulario.addEventListener("submit", function (event) {
             telefono.focus();
         }else{
             document.getElementById("errorTelefono").innerHTML = "";
-            error = false;
         }
     }
     
@@ -72,16 +69,15 @@ formulario.addEventListener("submit", function (event) {
             mensaje.focus();
         }else{
             document.getElementById("errorMensaje").innerHTML = "";
-            error = false;
         }
     }
-
+    
     //LLAMO A ESAS FUNCIONES
     validarNombre();
     validarEmail();
     validarTelefono();
     validarMensaje();
-    
+
     //CON ESTE CONTROL DE FLUJO DETERMINO AL FINAL SI MI VAR ERROR TERMINO EN FALSE O EN TRUE, SI ES FALSE ME REINICIA TODOS LOS INPUTS Y ME TIRA UNA ALERTA DE QUE FUERON ENVIADOS LOS DATOS
     if(error == false){
         nombre.value= "";
