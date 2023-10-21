@@ -75,23 +75,27 @@
             <h2>Contactanos</h2>
         </div>
         <div class="contenedor-form">
-            <form action="" class="form">
+            <form action="" class="form" id="formulario">
                 <fieldset style="border: none;">
                     <div>
                         <label for="nombre">Nombre: </label>
-                        <input size="30" type="text" name="nombre" placeholder="Ingrese su nombre aqui...">
+                        <input size="30" type="text" name="nombre" placeholder="Ingrese su nombre aqui..." id="nombre">
+                        <span id="errorNombre" style="color: red;"></span>
                     </div>
                     <div>
                         <label for="correo">Mail:</label>
-                        <input type="text" name="correo" placeholder="Ingrese su correo aqui...">
+                        <input type="text" name="correo" placeholder="Ingrese su correo aqui..." id="email">
+                        <span id="errorEmail" style="color: red;"></span>
                     </div>
                     <div>
                         <label for="telefono">Telefono: </label>
-                        <input type="tel" name="telefono" placeholder="Ingrese su telefono aqui ....">
+                        <input type="tel" name="telefono" placeholder="Ingrese su telefono aqui ...." id="telefono">
+                        <span id="errorTelefono" style="color: red;"></span>
                     </div>
                     <div>
                         <label for="consulta">Consulta:</label>
-                        <textarea name="consulta" rows="10" cols="35" placeholder="Consulte aqui"></textarea>
+                        <textarea name="consulta" rows="10" cols="35" placeholder="Consulte aqui" id="mensaje"></textarea>
+                        <span id="errorMensaje" style="color: red;"></span>
                         <input type="submit" value="Enviar">
                     </div>
                 </fieldset>
@@ -103,8 +107,22 @@
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
+        <div class="contenedor-info">
+            <div>
+                <img src="../img/iconos/llamada.png" alt="telefono">
+                <p>+541144682867</p>
+            </div>
+            <div>
+                <img src="../img/iconos/email.png" alt="email">
+                <p>bluelabel@gmail.com</p>
+            </div>
+            <div>
+                <img src="../img/iconos/ubicacion.png" alt="ubicacion">
+                <p>Jean Jaures 1149</p>
+            </div>
+        </div>
     </main>
-    <footer>
+    <footer class="footer-contacto">
         <div class="footer-up">
             <div>
                 <img src="../img/imagenes/footer/moneda.png" alt="">
@@ -144,6 +162,7 @@
             </div>
         </div>
     </footer>
+    <script src="../js/form.js"></script>
 </body>
 
 </html>
