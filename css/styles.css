@@ -39,6 +39,10 @@ nav {
     z-index: 10;
 }
 
+.resp-navcontenedormayor{
+    display: none;
+}
+
 .nav-contenedor-ul {
     height: max-content;
     width: 100%;
@@ -94,7 +98,7 @@ nav {
     color: rgba(255, 208, 114, 0.768);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;    
     padding-bottom: 1em;
     z-index: 22;
 }
@@ -680,4 +684,100 @@ footer{
     .footer-nosotros{
         margin-top: 196.5em;
     }
+}
+
+@media screen and (max-width: 600px){  
+
+/* div-h1{
+    align-items: center;
+    padding-top: 12em; 
+    
+} */
+.nav {
+    /* width: 100%; */
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    }
+    
+
+.nav-contenedor-ul{
+    display: none;
+}
+
+.resp-navcontenedormayor{
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em;
+
+}
+
+.respnavcontenedorul{
+ 
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    list-style: none;
+    background-color: rgba(0, 0, 0, 0.476);
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    padding-top: 25em;
+    right: 0;
+    /* width: 100%; */
+    z-index: 200
+}
+
+.hamburguesa{
+    background: black;
+    z-index: 300;
+}
+.logox{
+    background: black;
+    right: 0;
+}
+
+.respnavcontenedorul_visible{
+    opacity: 1;
+    visibility: visible;
+}
+
+.respnavcontenedorul li :hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    color: rgb(255, 205, 140);
+}
+
+.respnavcontenedorul li{
+    display: flex;
+    height: 100%;
+    margin: 0em 1em;
+    padding: 0.2em;
+}
+.respnavcontenedorul a {
+    display: flex;
+    height: 100%;
+    font-family: "Libre Baskerville", serif;
+    font-size: 1em;
+    /* font-weight: 600; */
+    text-decoration: none;
+    color: rgb(211, 186, 43);
+    padding: 0.2em;
+}
+.resp-nav-contenedor-div img {
+    position: relative;
+    width: 10em;
+    height: 10em;
+}
+
+
+.resp-nav-contenedor-buscador img,
+.resp-nav-contenedor-carrito img {
+    width: 2.5em;
+    height: 2.5em;
+}
 }
