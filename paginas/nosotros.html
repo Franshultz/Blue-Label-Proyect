@@ -17,27 +17,47 @@
 <body>
     <nav>
         <ul class="nav-contenedor-ul">
-            <li>
-                <div class="nav-contenedor-div">
-                    <img src="../img/Logo.png" alt="Logo" />
-                </div>
-            </li>
-            <li><a href="../index.html">INICIO</a></li>
-            <li><a href="./productos.html">PRODUCTOS</a></li>
-            <li><a href="./ofertas.html">OFERTAS</a></li>
-            <li><a href="./contacto.html">CONTACTO</a></li>
-            <li><a href="./nosotros.html">NOSOTROS</a></li>
-            <li>
-                <div class="nav-contenedor-buscador">
-                    <img src="../img/iconos/buscar.png" alt="" />
-                </div>
-            </li>
-            <li>
-                <div class="nav-contenedor-carrito">
-                    <img src="../img/iconos/compra.png" alt="" />
-                </div>
-            </li>
+            <div class="nav-contenedor-div">
+                <img src="../img/Logo.png" alt="Logo">
+            </div>
+            <li class="menus"><a href="../index.html">INICIO</a></li>
+            <li class="menus"><a href="../paginas/productos.html">PRODUCTOS</a></li>
+            <li class="menus"><a href="../paginas/ofertas.html">OFERTAS</a></li>
+            <li class="menus"><a href="../paginas/contacto.html">CONTACTO</a></li>
+            <li class="menus"><a href="../paginas/nosotros.html">NOSOTROS</a></li>
+            <div class="nav-contenedor-buscador">
+                <img src="../img/iconos/buscar.png" alt="buscador">
+            </div>
+            <div class="nav-contenedor-carrito">
+                <img src="../img/iconos/compra.png" alt="carrito de compras">
+            </div>
+            <div class="menu-hamburguesa" id="menu-hamburguesa">
+                <img src="../img/iconos/menu.png" alt="menu">
+            </div>
         </ul>
+        <div class="resp-navcontenedormayor">
+            <div class="resp-nav-contenedor-div">
+                <img src="../img/Logo.png" alt="Logo">
+            </div>
+            <button class="hamburguesa"><img src="../img/iconos/menu-regular.png" alt="menu"></button>
+            <ul class="respnavcontenedorul">
+                <li><a href="../index.html">INICIO</a></li>
+                <li><a href="../paginas/productos.html">PRODUCTOS</a></li>
+                <li><a href="../paginas/ofertas.html">OFERTAS</a></li>
+                <li><a href="../paginas/contacto.html">CONTACTO</a></li>
+                <li><a href="../paginas/nosotros.html">NOSOTROS</a></li>
+                <li>
+                    <div class="resp-nav-contenedor-buscador">
+                        <img src="../img/iconos/buscar.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="resp-nav-contenedor-carrito">
+                        <img src="../img/iconos/compra.png" alt="">
+                    </div>
+                </li>
+            </ul>
+        </div>
     </nav>
     <header>
         <div class="div-h1">
@@ -100,7 +120,10 @@
                 <img src="../img/iconos/mision.png" alt="Mision de bluelabel" />
                 <h3>Misión</h3>
                 <p>
-                    Seguir siendo una compañía en constante crecimiento, desarrollo y dinamismo es fundamental para nuestro compromiso. Nos enorgullece ofrecer a nuestros clientes las mejores bebidas locales y del mundo, con una atención inigualable. Nuestra prioridad es mantener una sólida y duradera relación con nuestros clientes, brindándoles experiencias excepcionales en cada interacción.
+                    Seguir siendo una compañía en constante crecimiento, desarrollo y dinamismo es fundamental para
+                    nuestro compromiso. Nos enorgullece ofrecer a nuestros clientes las mejores bebidas locales y del
+                    mundo, con una atención inigualable. Nuestra prioridad es mantener una sólida y duradera relación
+                    con nuestros clientes, brindándoles experiencias excepcionales en cada interacción.
                 </p>
             </div>
             <div class="contenedor-target">
@@ -185,6 +208,7 @@
             </div>
         </div>
     </footer>
+    <script src="../js/index.js"></script>
 </body>
 
 </html>
