@@ -72,7 +72,7 @@ formulario.addEventListener("submit", function (event) {
         }
     }
     
-    //LLAMO A ESAS FUNCIONES
+    //LLAMO A LAS FUNCIONES
     validarNombre();
     validarEmail();
     validarTelefono();
@@ -84,6 +84,10 @@ formulario.addEventListener("submit", function (event) {
         errorNombre.innerHTML="";
         email.value= "";
         errorEmail.innerHTML="";
+        telefono.value= "";
+        errorTelefono.innerHTML="";
+        mensaje.value= "";
+        errorMensaje.innerHTML="";
         alert("Datos enviados correctamente");
     }
     
